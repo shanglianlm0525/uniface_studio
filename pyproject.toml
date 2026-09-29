@@ -1,0 +1,77 @@
+[project]
+name = "uniface-studio"
+version = "1.0.0"
+description = "A complete Gradio interface for every UniFace task and model"
+readme = "README.md"
+requires-python = ">=3.10,<3.15"
+dependencies = [
+    "numpy>=1.21.0",
+    "opencv-python>=4.5.0",
+    "scikit-image>=0.22.0",
+    "scipy>=1.7.0",
+    "requests>=2.28.0",
+    "tqdm>=4.64.0",
+    "gradio>=5.0,<6",
+    "faiss-cpu>=1.8.0",
+    "protobuf>=3.20,<5",
+    "torch>=2.0",
+]
+
+[project.optional-dependencies]
+cpu = [
+    "onnxruntime>=1.16.0; python_version >= '3.11'",
+    "onnxruntime>=1.16.0,<1.24; python_version < '3.11'",
+]
+gpu = [
+    "onnxruntime-gpu>=1.16.0; python_version >= '3.11'",
+    "onnxruntime-gpu>=1.16.0,<1.24; python_version < '3.11'",
+]
+dev = ["pytest>=7.0.0", "ruff>=0.4.0"]
+
+[project.scripts]
+uniface-studio = "uniface_gui.app:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = [".", "uniface"]
+include = ["uniface_gui*", "uniface*"]
+namespaces = false
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+exclude = [
+    ".git",
+    ".ruff_cache",
+    "__pycache__",
+    "build",
+    "dist",
+    "*.egg-info",
+    ".venv",
+    "venv",
+    ".pytest_cache",
+    "*.ipynb",
+    "uniface",
+]
+
+[tool.ruff.format]
+quote-style = "single"
+docstring-code-format = true
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B", "C4", "SIM", "RUF", "D205", "D212"]
+ignore = ["E501", "B008", "SIM108", "RUF022"]
+
+[tool.ruff.lint.isort]
+force-single-line = false
+force-sort-within-sections = true
+known-first-party = ["uniface", "uniface_gui"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"

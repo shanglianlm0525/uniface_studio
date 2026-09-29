@@ -1,0 +1,215 @@
+# -----------------------------------------------------------------------------
+# Secrets and local credentials
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.template
+*.env.local
+
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.kdbx
+*.ovpn
+id_rsa
+id_rsa.*
+id_dsa
+id_dsa.*
+id_ecdsa
+id_ecdsa.*
+id_ed25519
+id_ed25519.*
+
+credentials.json
+client_secret*.json
+service-account*.json
+service_account*.json
+secrets.json
+secrets.yaml
+secrets.yml
+*.credentials
+*.secret
+
+# Cloud and infrastructure credentials
+.aws/
+.azure/
+.gcloud/
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# -----------------------------------------------------------------------------
+# Python environments, caches, builds, and test artifacts
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.so
+
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+__pypackages__/
+
+build/
+dist/
+site/
+*.egg
+*.egg-info/
+.eggs/
+wheels/
+pip-wheel-metadata/
+
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+.hypothesis/
+.tox/
+.nox/
+.cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+*.cover
+*.py,cover
+
+# -----------------------------------------------------------------------------
+# Logs, diagnostics, runtime state, and temporary files
+# -----------------------------------------------------------------------------
+*.log
+*.log.*
+logs/
+log/
+crash-*.txt
+debug.log
+error.log
+pip-log.txt
+
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.orig
+*.rej
+*~
+tmp/
+temp/
+.tmp/
+.temp/
+
+*.pid
+*.pid.lock
+*.lock.tmp
+
+# -----------------------------------------------------------------------------
+# UniFace models, generated media, indexes, and local data
+# -----------------------------------------------------------------------------
+.uniface/
+models/
+weights/
+checkpoints/
+*.onnx
+*.ort
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.tflite
+*.pb
+
+outputs/
+output/
+results/
+runs/
+artifacts/
+uploads/
+downloads/
+generated/
+
+vector_index/
+uniface_vector_index/
+faiss_index.bin
+*.faiss
+*.index
+metadata.local.json
+
+# Local databases and user data
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sqlite3-journal
+datasets/
+data/local/
+data/private/
+
+# Gradio temporary/cache directories created inside the repository
+gradio_cached_examples/
+flagged/
+
+# -----------------------------------------------------------------------------
+# IDE and editor settings
+# -----------------------------------------------------------------------------
+.idea/
+.vscode/
+*.code-workspace
+.fleet/
+.vs/
+.history/
+.ropeproject/
+.spyderproject
+.spyproject
+*.sublime-project
+*.sublime-workspace
+
+# AI coding tool local state
+.claude/
+.cursor/
+.windsurf/
+.continue/
+.aider*
+
+# -----------------------------------------------------------------------------
+# Jupyter and documentation build output
+# -----------------------------------------------------------------------------
+.ipynb_checkpoints/
+profile_default/
+docs/_build/
+mkdocs_build/
+
+# -----------------------------------------------------------------------------
+# Operating system files
+# -----------------------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+ehthumbs.db
+ehthumbs_vista.db
+
+# -----------------------------------------------------------------------------
+# Archives and installers generated for distribution
+# -----------------------------------------------------------------------------
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.msi
+*.exe
