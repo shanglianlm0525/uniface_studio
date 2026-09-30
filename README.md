@@ -22,6 +22,10 @@ UniFace Studio 是基于 Gradio 的 UniFace 图形界面，覆盖 UniFace 4.0.0 
 
 模型权重在首次使用时自动下载，并使用 SHA-256 校验。也可以在“模型管理”页面提前批量下载。
 
+![dbc918f5-afb6-47d5-b0a5-c94ff8770ee3.png](E:\python_code\uniface_studio\dbc918f5-afb6-47d5-b0a5-c94ff8770ee3.png)
+
+
+
 ## 环境要求
 
 - Python 3.10–3.14
